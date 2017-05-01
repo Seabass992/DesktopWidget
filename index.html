@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Asteroids</title>
+	<style>
+		body {
+			overflow: hidden;
+		}
+
+		body, html, #cpus {
+			width: 100%;
+			height: 100%;
+			margin:0;
+			padding:0;
+		}
+
+		#cpus {
+			backgroundColor: #fff;
+		}
+	</style>
+</head>
+<body>
+	<div id="game">
+
+	</div>
+	<script src="asteroids.js"></script>
+	<script src="cpuCalc.js"></script>
+	<script>
+		//const remote = require('electron').remote;
+		//const idleName = 'idle';
+		window.game = new Game(document.getElementById('game'));
+		window.game.play();
+		//var os = remote.getGlobal('os');
+		//var calc = CpuCalculator(os);
+		//var table = document.getElementById('cpus');
+		//var refreshTimeout = -1;
+		//function refresh() {
+		//	var promise = calc.calc();
+		//	promise.then((results) => {
+		//		while(table.tBodies.length > 0) table.removeChild(table.tBodies[0]);
+		//		if(table.tHead != null) table.removeChild(table.tHead)
+		//		var head = table.createTHead();
+		//		var headerRow = head.insertRow(0);
+		//		headerRow.insertCell(0).innerHTML = "CPU";
+		//		var body = table.createTBody();
+		//		if(table.caption == null) table.createCaption();
+		//		table.caption.innerHTML = results.model;
+		//		results.percents.forEach((p, i) => {
+		//			var row = body.insertRow(0);
+		//			var cell = row.insertCell(0).innerHTML = `${i}`;
+		//			var j = 1;
+		//			for(type in p) {
+		//				row.insertCell(j++).innerHTML = `${Math.round(p[type]*100)}%`;
+		//				
+		//				if(i == 0) headerRow.insertCell(1).innerHTML = type;
+		//			}
+		//		});
+		//		refreshTimeout = setTimeout(refresh,1);
+		//	});
+		//}
+		refreshTimeout = setTimeout(refresh, 1);
+	</script>
+</body>
+</html>
