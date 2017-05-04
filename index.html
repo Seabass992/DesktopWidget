@@ -14,15 +14,23 @@
 			padding:0;
 		}
 
-		#cpus {
-			backgroundColor: #fff;
+		#background {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+		}
+
+		#background > img {
+			width: 100%;
 		}
 	</style>
 </head>
 <body>
-	<div id="game">
-
+	<div id="background">
+		<img src='res\rolly_rocket_by_valenberg-d9y6rvp.gif'></img>
 	</div>
+	<div></div>
 	<script src="asteroids.js"></script>
 	<script src="cpuCalc.js"></script>
 	<script>
